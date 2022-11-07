@@ -1,0 +1,59 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AccessCameraDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="520dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/black">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add your image"
+            android:textSize="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/extract_image"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button1"
+            android:src="@drawable/ic_baseline_camera_alt_24"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/view_img"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_image_24"></ImageView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_image"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Add"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button1" />
+</LinearLayout>
+    </LinearLayout>
+

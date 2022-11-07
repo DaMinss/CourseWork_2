@@ -21,15 +21,21 @@ import java.util.ArrayList;
 
 public class ImageAdapter extends BaseAdapter {
 
-   private ArrayList<String> image_list;
+   private ArrayList<ImageModel> image_list;
 
     private Context mContext;
-    protected static final String _FILE_NAME = "CourseWork_2_image_list.txt";
 
-    public ImageAdapter(Context mContext, ArrayList<String> list) {
+    public ImageAdapter(Context mContext, ArrayList<ImageModel> list) {
 
         this.mContext = mContext;
         this.image_list = list;
+        notifyDataSetChanged();
+    }
+    public void updatelist(Context mContext, ArrayList<ImageModel> list) {
+
+        this.mContext = mContext;
+        this.image_list = list;
+        notifyDataSetChanged();
     }
 
 
@@ -53,9 +59,11 @@ public class ImageAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
+            ImageModel imageModel = image_list.get(position);
+
              ImageView imageView = (ImageView) convertView;
             imageView = new ImageView(mContext);
-            Picasso.with(mContext).load(image_list.get(position)).into(imageView);
+            Picasso.with(mContext).load(imageModel.getImageurl()).into(imageView);
             imageView.setLayoutParams(new ViewGroup.LayoutParams(345, 345));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             return imageView;
